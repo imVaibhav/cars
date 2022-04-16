@@ -128,8 +128,10 @@ class _VehicleState extends State<Vehicles> {
                     ],
                   ),
                 );
-              }
-
+              } else if (state is LoadingState)
+                return Center(
+                  child: CircularProgressIndicator(),
+                );
               return Container();
             },
           )),
